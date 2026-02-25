@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Syntax</title>
+  <link href="_css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>HTML Syntax</h1>
+
+<p>Comp 484</p>
+
+<ul>
+  <li><a href="index.html" title="Introduction to HTML">Introduction to HTML</a></li>
+  <li><a href="syntax.html" title="HTML syntax">HTML syntax</a></li>
+  <li><a href="links.html" title="Creating links">Creating links</a></li>
+  <li><a href="reference.html" title="HTML Reference">HTML reference</a></li>
+  <li><a href="next.html" title="Next steps">Next steps</a></li>
+</ul>
+
+<p>
+Because HTML is often people&rsquo;s first experience with coding, there can be some apprehension about learning it. Thankfully, HTML syntax is relatively simple and easy to learn. Most people can learn the basics of HTML and begin coding within the same day.
+</p>
+
+<h2>A Markup Language</h2>
+
+<p>
+HTML is a markup language, meaning that content on a page is marked up by tags that identify the content inside them. A paragraph, for example, can be identified by placing the opening <code>&lt;p&gt;</code> tag before the content and the closing <code>&lt;/p&gt;</code> tag after it.
+</p>
+
+<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+<p>
+Tags consist of a left angle bracket (&lt;), followed by characters that identify the tag, and a right angle bracket (&gt;). Closing tags are the same as opening tags, but include a forward slash (/). Although many elements require both an opening and closing tag, some elements do not require a closing tag at all.
+</p>
+
+<h2>Basic Document Structure</h2>
+
+<p>
+All HTML documents revolve around three basic elements. The <code>&lt;html&gt;</code> element identifies the document as HTML. Inside it is the <code>&lt;head&gt;</code> element, which contains metadata, the document title, and links to external resources. Following the head is the <code>&lt;body&gt;</code> element, which contains all visible page content.
+</p>
+
+<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>Doctypes</h2>
+
+<p>
+A doctype declaration appears before the opening HTML tag and tells the browser which version of HTML to expect. In practice, doctypes are mainly used to trigger standards mode rather than quirks mode. For that reason, all HTML documents should include a doctype declaration.
+</p>
+
+<p>Common doctypes include:</p>
+
+<p><strong>HTML 4.0 Transitional</strong></p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+
+<p><strong>XHTML 1.0 Transitional</strong></p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></pre>
+
+<p><strong>HTML5</strong></p>
+<pre><code>&lt;!DOCTYPE HTML&gt;</code></pre>
+
+<h2>Element Attributes</h2>
+
+<p>
+Some elements can be enhanced using attributes. Attributes provide additional information or functionality and consist of a name and value. Values are typically placed in quotation marks.
+</p>
+
+<pre><code>&lt;h1 class="headline"&gt;Article&rsquo;s main headline&lt;/h1&gt;</code></pre>
+
+<h2>Replaced Elements</h2>
+
+<p>
+Some HTML elements are replaced by external resources such as images or videos. These are called replaced elements and often have predefined dimensions.
+</p>
+
+<pre><code>&lt;img src="photo.jpg" alt="my awesome photo"&gt;</code></pre>
+
+<h2>Code Structure</h2>
+
+<p>
+HTML creates structure by nesting elements inside one another. When nesting elements, child elements must be closed before their parent elements.
+</p>
+
+<p>This example is incorrect:</p>
+
+<pre class="wrong"><code>&lt;p&gt;You must close all nested tags &lt;strong&gt;first!&lt;/p&gt;&lt;/strong&gt;</code></pre>
+
+<p>This is the correct syntax:</p>
+
+<pre class="correct"><code>&lt;p&gt;You must close all nested tags &lt;strong&gt;first!&lt;/strong&gt;&lt;/p&gt;</code></pre>
+
+<p>
+HTML also has rules about which elements may be nested inside others. Traditionally, HTML distinguished between block-level and inline-level elements. HTML5 expands this concept into several content categories, making nesting rules more detailed but also more flexible.
+</p>
+
+<h2>Commenting Code</h2>
+
+<p>
+Comments are used to leave notes within code. They are ignored by browsers and are helpful for documentation and collaboration.
+</p>
+
+<pre><code>&lt;!-- This is a comment --&gt;</code></pre>
+
+<h2>Using Special Characters</h2>
+
+<p>
+Some characters are reserved in HTML and must be written using named character entities. These entities begin with an ampersand and end with a semicolon. For example, to display an ampersand you would use <strong>&amp;amp;</strong>.
+</p>
+
+<p>
+You can find a list of named character entities on the
+<a href="reference.html#named">HTML Reference</a> page.
+</p>
+
+</body>
+</html>
